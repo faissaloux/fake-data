@@ -1,0 +1,36 @@
+{
+  "name": "@faissaloux/fake-data",
+  "version": "0.1.0",
+  "description": "fake data generator",
+  "author": {
+    "name": "Faissal Wahabali",
+    "email": "contact@faissaloux.com",
+    "url": "https://www.faissaloux.com"
+  },
+  "keywords": [
+    "fake data",
+    "generator",
+    "react"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/faissaloux/fake-data",
+  "dependencies": {
+    "@faker-js/faker": "^9.1.0"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
