@@ -21,12 +21,25 @@ describe('faker', () => {
         expect(data).toHaveLength(4);
         expect(data[0]).toHaveProperty('first_name');
         expect(data[0]).toHaveProperty('last_name');
+        expect(data[0]).not.toEqual('person.firstName');
+        expect(data[0]).not.toEqual('person.lastName');
+    });
+
+    test('generates different records', () => {
+        const data = useFakeData({
+            'first_name': 'person.firstName',
+            'last_name': 'person.lastName',
+        }, 2);
+
+        expect(data).toHaveLength(2);
+        expect(data[0]['first_name']).not.toEqual(data[1]['first_name']);
+        expect(data[0]['last_name']).not.toEqual(data[1]['last_name']);
     });
 
     test('keeps leteral value when not supported', () => {
         const data = useFakeData({
             'departure': 'notsupported',
-            'destination': 'notsupported',
+            'destination': 'notsupported'
         });
 
         expect(data).toHaveLength(1);
