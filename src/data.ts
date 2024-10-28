@@ -1,4 +1,4 @@
-import { faker } from "@faker-js/faker";
+import { faker } from '@faker-js/faker';
 
 function fakeData(): {[key: string]: string} {
     return {
@@ -8,6 +8,6 @@ function fakeData(): {[key: string]: string} {
         'person.female.firstName': faker.person.firstName('female'),
         'person.lastName': faker.person.lastName(),
     };
-};
+}
 
 export default fakeData;

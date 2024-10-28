@@ -1,4 +1,4 @@
-import Generator from "../../src/generator";
+import Generator from '../../src/generator';
 
 describe('generator', () => {
     test('generates valid option', () => {
