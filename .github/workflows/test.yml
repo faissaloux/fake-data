@@ -29,3 +29,8 @@ jobs:
 
       - name: Test
         run: yarn test-cov
+
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
