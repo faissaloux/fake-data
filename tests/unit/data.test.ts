@@ -1,4 +1,4 @@
-import fakeData from "../../src/data";
+import fakeData from '../../src/data';
 
 describe('data', () => {
     test('generates valid option', () => {

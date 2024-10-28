@@ -1,4 +1,4 @@
-import fakeData from "./data";
+import fakeData from './data';
 
 class Generator {
     private data: {[key: string]: string} = fakeData();

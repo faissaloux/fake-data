@@ -1,4 +1,4 @@
-import { useFakeData } from "../../src";
+import { useFakeData } from '../../src';
 
 describe('faker', () => {
     test('generate one by default', () => {
