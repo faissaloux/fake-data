@@ -61,4 +61,28 @@ describe('faker', () => {
         expect(data[0]['departure']).toBe('internet.notsupported');
         expect(data[0]['destination']).toBe('internet.notsupported');
     });
+
+    test('generates nested objects', () => {
+        const data = useFakeData({
+            'departure': 'location.city',
+            'destination': 'location.city',
+            'driver': {
+                'first_name': 'person.firstName',
+                'last_name': 'person.lastName',
+                'price': {
+                    'amount': 20,
+                    'currency': 'MAD',
+                }
+            }
+        }, 2);
+
+        expect(data).toHaveLength(2);
+        expect(data[0]).toHaveProperty('departure');
+        expect(data[0]).toHaveProperty('destination');
+        expect(data[0]).toHaveProperty('driver');
+        expect(data[0]).toHaveProperty('driver.first_name');
+        expect(data[0]).toHaveProperty('driver.last_name');
+        expect(data[0]['driver']['first_name'].length).toBeGreaterThan(1);
+        expect(data[0]['driver']['price']['currency'].length).toBeGreaterThan(1);
+    });
 });

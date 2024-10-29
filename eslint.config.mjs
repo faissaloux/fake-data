@@ -8,7 +8,10 @@ export default [
         files: ['**/*.{js,mjs,cjs,ts}'],
     },
     {
-        ignores: ['**/coverage/*'],
+        ignores: [
+            '**/coverage/*',
+            '**/dist/*'
+        ],
     },
     {
         languageOptions: {
