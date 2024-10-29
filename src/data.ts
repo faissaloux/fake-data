@@ -7,6 +7,7 @@ function fakeData(): {[key: string]: string} {
         'person.male.firstName': faker.person.firstName('male'),
         'person.female.firstName': faker.person.firstName('female'),
         'person.lastName': faker.person.lastName(),
+        'finance.amount': faker.finance.amount(),
     };
 }
 
