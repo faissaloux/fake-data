@@ -1,19 +1,27 @@
 import Generator from './generator';
 
-function useFakeData(data: {[key: string]: string}, count = 1): {[key: string]: string}[] {
-    const generated: {[key: string]: string}[] = [];
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+function useFakeData(data: {[key: string]: any}, count = 1): {[key: string]: any}[] {
+    const generated: {[key: string]: any}[] = [];
 
     for (let i = 0; i < count; i++) {
-        const objectGenerated: {[key : string]: string} = {};
-
-        for (const [key, value] of Object.entries(data)) {
-            objectGenerated[key] = new Generator(value).generate();
-        }
-
-        generated.push(objectGenerated);
+        generated.push(generateFakeDataFor(data));
     }
 
     return generated;
+}
+
+function generateFakeDataFor(data: {[key: string]: any}): {[key : string]: any} {
+    const objectGenerated: {[key : string]: string|{[key: string]: string}} = {};
+
+    for (const [key, value] of Object.entries(data)) {
+        objectGenerated[key] = typeof value === 'object'
+            ? generateFakeDataFor(value)
+            : new Generator(value).generate();
+    }
+
+    return objectGenerated;
 }
 
 export { useFakeData };

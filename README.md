@@ -46,7 +46,9 @@ import { useFakeData } from '@faissaloux/fake-data';
 const popularTrips = useFakeData({
     from: 'location.city',
     to: 'location.city',
-    driver: 'person.firstName'
+    driver: {
+        'first_name': 'person.firstName'
+    }
 }, 2);
 ```
 
@@ -55,12 +57,16 @@ const popularTrips = useFakeData({
 
 [
     {
-        driver: "Walker",
+        driver: {
+            first_name: "Walker",
+        },
         from: "Archibaldburgh",
         to: "Port Dashawnport"
     },
     {
-        driver: "Mercedes",
+        driver: {
+            first_name: "Mercedes",
+        },
         from: "Port Charlotte",
         to: "West Myles"
     }
