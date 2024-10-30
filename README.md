@@ -80,3 +80,4 @@ const popularTrips = useFakeData({
 - person.female.firstName
 - person.lastName
 - finance.amount
+- finance.currencyCode
