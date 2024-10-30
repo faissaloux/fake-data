@@ -9,6 +9,7 @@ function fakeData(): {[key: string]: string} {
         'person.lastName': faker.person.lastName(),
         'finance.amount': faker.finance.amount(),
         'finance.currencyCode': faker.finance.currencyCode(),
+        'image.avatar': faker.image.avatar(),
     };
 }
 
