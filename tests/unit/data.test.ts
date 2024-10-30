@@ -8,6 +8,7 @@ describe('data', () => {
         'person.female.firstName',
         'person.lastName',
         'finance.amount',
+        'finance.currencyCode',
     ];
 
     it.each(dataset)('generates valid option', (type) => {
