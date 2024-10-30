@@ -81,3 +81,4 @@ const popularTrips = useFakeData({
 - person.lastName
 - finance.amount
 - finance.currencyCode
+- image.avatar
