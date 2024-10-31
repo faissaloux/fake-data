@@ -11,6 +11,14 @@ describe('finance data type', () => {
             expect((amount as string).includes('.')).toBeTruthy();
         });
 
+        test('generates valid data when invalid param provided', () => {
+            // @ts-expect-error: invalid param
+            const amount = finance.amount('invalid');
+
+            expect(typeof amount).toBe('string');
+            expect(Number.isNaN(Number(amount))).toBeFalsy();
+        });
+
         test('range and returns string by default', () => {
             const amount = finance.amount({min: 0, max: 1});
 

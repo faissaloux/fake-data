@@ -11,7 +11,7 @@ describe('person data type', () => {
             expect(firstName.length).toBeGreaterThan(2);
         });
 
-        test('invalid param', () => {
+        test('generates valid data when invalid param provided', () => {
             // @ts-expect-error: invalid param
             const firstName = person.firstName('invalid');
 
@@ -42,7 +42,7 @@ describe('person data type', () => {
             expect(lastName.length).toBeGreaterThan(2);
         });
 
-        test('invalid param', () => {
+        test('generates valid data when invalid param provided', () => {
             // @ts-expect-error: invalid param
             const lastName = person.lastName('invalid');
 
