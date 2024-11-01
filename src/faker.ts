@@ -1,6 +1,8 @@
 import DataUnifier, { unifiedObject } from './dataUnifier';
 import Generator from './generator';
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 function useFakeData(data: {[key: string]: any}, count = 1): {[key: string]: any}[] {
     const generated: unifiedObject[] = [];
 

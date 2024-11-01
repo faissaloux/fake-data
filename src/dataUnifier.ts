@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export interface unifiedObject {
     [key: string]: {identifier: string, args?: any}
 }
