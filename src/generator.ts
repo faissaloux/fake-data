@@ -14,9 +14,7 @@ class Generator {
     };
 
     constructor(private value: string) {
-        let methods: string[];
-        [this.dataType, ...methods] = typeof this.value === 'string' ? this.value.split('.') : [];
-        this.method = methods.join('.').replaceAll('.', '_');
+        [this.dataType, this.method] = typeof this.value === 'string' ? this.value.split('.') : [];
     }
 
     generate(parameters: any = null) {
