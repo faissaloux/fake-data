@@ -61,4 +61,21 @@ describe('finance data type', () => {
             expect((amount as string).startsWith('$')).toBeTruthy();
         });
     });
+
+    describe('currencyCode', function() {
+        test('no params', () => {
+            const currencyCode = finance.currencyCode();
+
+            expect(typeof currencyCode).toBe('string');
+            expect(currencyCode.length).toBeGreaterThan(0);
+        });
+
+        test('generates valid data when invalid param provided', () => {
+            // @ts-expect-error: invalid param
+            const currencyCode = finance.currencyCode('invalid');
+
+            expect(typeof currencyCode).toBe('string');
+            expect(currencyCode.length).toBeGreaterThan(0);
+        });
+    });
 });
