@@ -73,12 +73,50 @@ const popularTrips = useFakeData({
 ]
 ```
 
+### Use args to customize your data
+You can customize your data by using `args`.
+
+```js
+import { useFakeData } from '@faissaloux/fake-data';
+
+const popularTrips = useFakeData({
+    from: 'location.city',
+    to: 'location.city',
+    driver: {
+        first_name: 'person.firstName',
+        price: {
+            identifier: 'finance.amount',
+            args: {min: 0, max: 100, asNumber: true}
+        },
+    }
+});
+```
+
+```js
+// popularTrips
+
+[
+    {
+        driver: {
+            first_name: "Michael",
+            price: 66.51
+        },
+        from: "Helmerbury",
+        to: "New Minniestead"
+    }
+]
+```
+
 ## Supported data
-- location.city
-- person.firstName
-- person.male.firstName
-- person.female.firstName
-- person.lastName
-- finance.amount
-- finance.currencyCode
-- image.avatar
+| Identifier            | Return type       | Args type             | Options               |
+| --------------------- | ----------------- | --------------------- | --------------------- |
+| location.city         | string            | [No params]           | [No params]           |
+| person.firstName      | string            | 'male'\|'female'      | 'male' or 'female'    |
+| person.lastName       | string            | 'male'\|'female'      | 'male' or 'female'    |
+| finance.amount        | string\|number    | object                | min?: number          |
+|                       |                   |                       | max?: number          |
+|                       |                   |                       | dec?: number          |
+|                       |                   |                       | symbol: string        |
+|                       |                   |                       | asNumber?: boolean    |
+| finance.currencyCode  | string            | [No params]           | [No params]           |
+| image.avatar          | string            | [No params]           | [No params]           |

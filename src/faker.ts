@@ -1,24 +1,27 @@
+import DataUnifier, { unifiedObject } from './dataUnifier';
 import Generator from './generator';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 function useFakeData(data: {[key: string]: any}, count = 1): {[key: string]: any}[] {
-    const generated: {[key: string]: any}[] = [];
+    const generated: unifiedObject[] = [];
+
+    const unifiedData: unifiedObject = new DataUnifier(data).unify();
 
     for (let i = 0; i < count; i++) {
-        generated.push(generateFakeDataFor(data));
+        generated.push(generateFakeDataFor(unifiedData));
     }
 
     return generated;
 }
 
-function generateFakeDataFor(data: {[key: string]: any}): {[key : string]: any} {
-    const objectGenerated: {[key : string]: string|{[key: string]: string}} = {};
+function generateFakeDataFor(data: unifiedObject): unifiedObject {
+    const objectGenerated: unifiedObject = {};
 
     for (const [key, value] of Object.entries(data)) {
-        objectGenerated[key] = typeof value === 'object'
-            ? generateFakeDataFor(value)
-            : new Generator(value).generate();
+        objectGenerated[key] = 'identifier' in value
+            ? new Generator(value['identifier']).generate(value['args'])
+            : generateFakeDataFor(value);
     }
 
     return objectGenerated;

@@ -84,6 +84,28 @@ describe('faker', () => {
         expect(data[0]).toHaveProperty('driver.last_name');
         expect(data[0]['driver']['first_name']).not.toEqual('person.firstName');
         expect(data[0]['driver']['first_name'].length).toBeGreaterThan(1);
-        expect(data[0]['driver']['price']['currency'].length).toBeGreaterThan(1);
+        expect(data[0]['driver']['price']['amount']).toEqual(20);
+        expect(data[0]['driver']['price']['currency']).toEqual('MAD');
+    });
+
+    test('generates configured data with args', () => {
+        const data = useFakeData({
+            departure: 'location.city',
+            destination: 'location.city',
+            driver: {
+                first_name: 'person.firstName',
+                last_name: 'person.lastName',
+                price: {
+                    amount: {
+                        identifier: 'finance.amount',
+                        args: {min: 0, max: 100, asNumber: true}
+                    },
+                    currency: 'finance.currencyCode',
+                }
+            }
+        }, 2);
+
+        expect(data[0]['driver']['price']['amount']).toBeLessThanOrEqual(100);
+        expect(data[0]['driver']['price']['amount']).toBeGreaterThanOrEqual(0);
     });
 });
