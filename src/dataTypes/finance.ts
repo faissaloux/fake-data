@@ -22,6 +22,10 @@ class Finance {
     currencyCode(): string {
         return faker.finance.currencyCode();
     }
+
+    currencySymbol(): string {
+        return faker.finance.currencySymbol();
+    }
 }
 
 export default Finance;
