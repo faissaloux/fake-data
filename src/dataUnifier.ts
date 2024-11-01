@@ -1,13 +1,15 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+export interface unifiedObject {
+    [key: string]: {identifier: string, args?: any}
+}
 
 class DataUnifier {
     constructor(private data: {[key: string]: any}) {}
 
-    unify(): {[key: string]: {identifier: string, args?: any}} {
+    unify(): unifiedObject {
         return this.unifyObject(this.data);
     }
 
-    unifyObject(object: {[key: string]: any}): {[key: string]: {identifier: string, args?: any}} {
+    unifyObject(object: {[key: string]: any}): unifiedObject {
         if ('identifier' in object) {
             return object;
         }

@@ -84,7 +84,8 @@ describe('faker', () => {
         expect(data[0]).toHaveProperty('driver.last_name');
         expect(data[0]['driver']['first_name']).not.toEqual('person.firstName');
         expect(data[0]['driver']['first_name'].length).toBeGreaterThan(1);
-        expect(data[0]['driver']['price']['currency'].length).toBeGreaterThan(1);
+        expect(data[0]['driver']['price']['amount']).toEqual(20);
+        expect(data[0]['driver']['price']['currency']).toEqual('MAD');
     });
 
     test('generates configured data with args', () => {
@@ -99,7 +100,7 @@ describe('faker', () => {
                         identifier: 'finance.amount',
                         args: {min: 0, max: 100, asNumber: true}
                     },
-                    currency: 'MAD',
+                    currency: 'finance.currencyCode',
                 }
             }
         }, 2);
