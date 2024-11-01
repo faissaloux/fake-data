@@ -85,7 +85,7 @@ const popularTrips = useFakeData({
     driver: {
         first_name: 'person.firstName',
         price: {
-            _: 'finance.amount',
+            identifier: 'finance.amount',
             args: {min: 0, max: 100, asNumber: true}
         },
     }
@@ -108,7 +108,7 @@ const popularTrips = useFakeData({
 ```
 
 ## Supported data
-| Identifier            | Return type       | Params type           | Options               |
+| Identifier            | Return type       | Args type             | Options               |
 | --------------------- | ----------------- | --------------------- | --------------------- |
 | location.city         | string            | [No params]           | [No params]           |
 | person.firstName      | string            | 'male'\|'female'      | 'male' or 'female'    |

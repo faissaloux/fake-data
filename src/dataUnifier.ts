@@ -3,12 +3,12 @@
 class DataUnifier {
     constructor(private data: {[key: string]: any}) {}
 
-    unify(): {[key: string]: {_: string, args?: any}} {
+    unify(): {[key: string]: {identifier: string, args?: any}} {
         return this.unifyObject(this.data);
     }
 
-    unifyObject(object: {[key: string]: any}): {[key: string]: {_: string, args?: any}} {
-        if ('_' in object) {
+    unifyObject(object: {[key: string]: any}): {[key: string]: {identifier: string, args?: any}} {
+        if ('identifier' in object) {
             return object;
         }
 
@@ -27,7 +27,7 @@ class DataUnifier {
     stringToObject(identifier: string): {[key: string]: string} {
         const newValue: {[key: string]: string} = {};
 
-        newValue['_'] = identifier;
+        newValue['identifier'] = identifier;
 
         return newValue;
     }

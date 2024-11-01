@@ -96,7 +96,7 @@ describe('faker', () => {
                 last_name: 'person.lastName',
                 price: {
                     amount: {
-                        _: 'finance.amount',
+                        identifier: 'finance.amount',
                         args: {min: 0, max: 100, asNumber: true}
                     },
                     currency: 'MAD',

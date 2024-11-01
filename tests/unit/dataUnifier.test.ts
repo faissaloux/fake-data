@@ -3,14 +3,14 @@ import DataUnifier from '../../src/dataUnifier';
 describe('data unifier', () => {
     test('stringToObject', () => {
         expect(new DataUnifier({}).stringToObject('person.firstName')).toStrictEqual({
-            '_': 'person.firstName'
+            identifier: 'person.firstName'
         });
     });
 
     test('unifyObject', () => {
         expect(new DataUnifier({}).unifyObject({first_name: 'person.firstName'})).toStrictEqual({
             first_name: {
-                _: 'person.firstName',
+                identifier: 'person.firstName',
             }
         });
     });
@@ -21,7 +21,7 @@ describe('data unifier', () => {
             driver: {
                 first_name: 'person.firstName',
                 price: {
-                    _: 'finance.amount',
+                    identifier: 'finance.amount',
                     args: {min: 10, max: 100}
                 }
             }
@@ -29,14 +29,14 @@ describe('data unifier', () => {
 
         const expected = {
             destination: {
-                _: 'location.city',
+                identifier: 'location.city',
             },
             driver: {
                 first_name: {
-                    _: 'person.firstName',
+                    identifier: 'person.firstName',
                 },
                 price: {
-                    _: 'finance.amount',
+                    identifier: 'finance.amount',
                     args: {min: 10, max: 100}
                 }
             }

@@ -19,8 +19,8 @@ function generateFakeDataFor(data: {[key: string]: any}): {[key : string]: any} 
     const objectGenerated: {[key : string]: string|{[key: string]: string}} = {};
 
     for (const [key, value] of Object.entries(data)) {
-        objectGenerated[key] = '_' in value
-            ? new Generator(value['_']).generate(value['args'])
+        objectGenerated[key] = 'identifier' in value
+            ? new Generator(value['identifier']).generate(value['args'])
             : generateFakeDataFor(value);
     }
 
