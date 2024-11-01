@@ -61,4 +61,21 @@ describe('finance data type', () => {
             expect((amount as string).startsWith('$')).toBeTruthy();
         });
     });
+
+    describe('currencySymbol', function() {
+        test('no params', () => {
+            const currencySymbol = finance.currencySymbol();
+
+            expect(typeof currencySymbol).toBe('string');
+            expect(currencySymbol.length).toBeGreaterThan(0);
+        });
+
+        test('generates valid data when invalid param provided', () => {
+            // @ts-expect-error: invalid param
+            const currencySymbol = finance.currencySymbol('invalid');
+
+            expect(typeof currencySymbol).toBe('string');
+            expect(currencySymbol.length).toBeGreaterThan(0);
+        });
+    });
 });
