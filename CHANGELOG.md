@@ -1,4 +1,13 @@
-## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.2.0...main)
+## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.3.0...main)
+
+## [v0.3.0](https://github.com/faissaloux/fake-data/compare/v0.2.0...v0.3.0) - 2024-11-02
+### Added
+- `location.country` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/14
+- `finance.currencySymbol` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/13
+- Ability to accept args by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/11
+
+### Tests
+- `finance.currencyCode` tests by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/12
 
 ## [v0.2.0](https://github.com/faissaloux/fake-data/compare/v0.1.0...v0.2.0) - 2024-10-30
 ### Added
