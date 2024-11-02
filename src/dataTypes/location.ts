@@ -4,6 +4,10 @@ class Location {
     city(): string {
         return faker.location.city();
     }
+
+    country(): string {
+        return faker.location.country();
+    }
 }
 
 export default Location;

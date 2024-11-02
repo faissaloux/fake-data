@@ -111,6 +111,7 @@ const popularTrips = useFakeData({
 | Identifier            | Return type       | Args type             | Options               |
 | --------------------- | ----------------- | --------------------- | --------------------- |
 | location.city         | string            | [No params]           | [No params]           |
+| location.country      | string            | [No params]           | [No params]           |
 | person.firstName      | string            | 'male'\|'female'      | 'male' or 'female'    |
 | person.lastName       | string            | 'male'\|'female'      | 'male' or 'female'    |
 | finance.amount        | string\|number    | object                | min?: number          |
