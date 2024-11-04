@@ -123,3 +123,4 @@ const popularTrips = useFakeData({
 | finance.currencySymbol| string            | [No params]           | [No params]           |
 | image.avatar          | string            | [No params]           | [No params]           |
 | system.mimeType       | string            | [No params]           | [No params]           |
+| system.semver         | string            | [No params]           | [No params]           |
