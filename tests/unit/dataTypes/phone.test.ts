@@ -19,4 +19,21 @@ describe('phone data type', () => {
             expect(imei.length).toBeGreaterThan(2);
         });
     });
+
+    describe('number', () => {
+        test('no params', () => {
+            const number = phone.number();
+
+            expect(typeof number).toBe('string');
+            expect(number.length).toBeGreaterThan(2);
+        });
+
+        test('generates valid data when invalid param provided', () => {
+            // @ts-expect-error: invalid param
+            const number = phone.number('invalid');
+
+            expect(typeof number).toBe('string');
+            expect(number.length).toBeGreaterThan(2);
+        });
+    });
 });
