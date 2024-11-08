@@ -1,4 +1,12 @@
-## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.3.0...main)
+## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.4.0...main)
+
+## [v0.4.0](https://github.com/faissaloux/fake-data/compare/v0.3.0...v0.4.0) - 2024-11-08
+### Added
+- `phone.number` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/19
+- `phone.imei` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/18
+- `commerce.product` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/17
+- `system.semver` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/16
+- `system.mimeType` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/15
 
 ## [v0.3.0](https://github.com/faissaloux/fake-data/compare/v0.2.0...v0.3.0) - 2024-11-02
 ### Added
