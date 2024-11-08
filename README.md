@@ -126,3 +126,4 @@ const popularTrips = useFakeData({
 | system.mimeType       | string            | [No params]           | [No params]           |
 | system.semver         | string            | [No params]           | [No params]           |
 | phone.imei            | string            | [No params]           | [No params]           |
+| phone.number          | string            | [No params]           | [No params]           |
