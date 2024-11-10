@@ -11,6 +11,10 @@ class Person {
     jobTitle(): string {
         return faker.person.jobTitle();
     }
+
+    jobType(): string {
+        return faker.person.jobType();
+    }
 }
 
 export default Person;

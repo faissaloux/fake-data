@@ -81,4 +81,21 @@ describe('person data type', () => {
             expect(jobTitle.length).toBeGreaterThan(2);
         });
     });
+
+    describe('jobType', function() {
+        test('no params', () => {
+            const jobType = person.jobType();
+
+            expect(typeof jobType).toBe('string');
+            expect(jobType.length).toBeGreaterThan(2);
+        });
+
+        test('generates valid data when invalid param provided', () => {
+            // @ts-expect-error: invalid param
+            const jobType = person.jobType('invalid');
+
+            expect(typeof jobType).toBe('string');
+            expect(jobType.length).toBeGreaterThan(2);
+        });
+    });
 });
