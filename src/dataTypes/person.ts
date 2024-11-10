@@ -7,6 +7,10 @@ class Person {
     lastName(params?: 'male'|'female'): string {
         return faker.person.lastName(params);
     }
+
+    jobTitle(): string {
+        return faker.person.jobTitle();
+    }
 }
 
 export default Person;

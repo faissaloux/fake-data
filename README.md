@@ -114,6 +114,7 @@ const popularTrips = useFakeData({
 | location.country      | string            | [No params]           | [No params]           |
 | person.firstName      | string            | 'male'\|'female'      | 'male' or 'female'    |
 | person.lastName       | string            | 'male'\|'female'      | 'male' or 'female'    |
+| person.jobTitle       | string            | [No params]           | [No params]           |
 | finance.amount        | string\|number    | object                | min?: number          |
 |                       |                   |                       | max?: number          |
 |                       |                   |                       | dec?: number          |
