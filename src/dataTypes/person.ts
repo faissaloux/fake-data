@@ -1,7 +1,12 @@
 import { faker } from '@faker-js/faker';
+
 class Person {
     firstName(params?: 'male'|'female'): string {
         return faker.person.firstName(params);
+    }
+
+    middleName(params?: 'male'|'female'): string {
+        return faker.person.middleName(params);
     }
 
     lastName(params?: 'male'|'female'): string {
