@@ -13,6 +13,10 @@ class Person {
         return faker.person.lastName(params);
     }
 
+    sex(): string {
+        return faker.person.sex();
+    }
+
     jobTitle(): string {
         return faker.person.jobTitle();
     }

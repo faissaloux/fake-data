@@ -96,6 +96,23 @@ describe('person data type', () => {
         });
     });
 
+    describe('sex', function() {
+        test('no params', () => {
+            const sex = person.sex();
+
+            expect(typeof sex).toBe('string');
+            expect(sex.length).toBeGreaterThan(2);
+        });
+
+        test('generates valid data when invalid param provided', () => {
+            // @ts-expect-error: invalid param
+            const sex = person.sex('invalid');
+
+            expect(typeof sex).toBe('string');
+            expect(sex.length).toBeGreaterThan(2);
+        });
+    });
+
     describe('jobTitle', function() {
         test('no params', () => {
             const jobTitle = person.jobTitle();
