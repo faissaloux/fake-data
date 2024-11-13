@@ -21,6 +21,10 @@ class Person {
         return faker.person.prefix(params);
     }
 
+    suffix(): string {
+        return faker.person.suffix();
+    }
+
     jobTitle(): string {
         return faker.person.jobTitle();
     }

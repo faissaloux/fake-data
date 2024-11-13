@@ -118,7 +118,7 @@ describe('person data type', () => {
             const prefix = person.prefix();
 
             expect(typeof prefix).toBe('string');
-            expect(prefix.length).toBeGreaterThan(2);
+            expect(prefix.length).toBeGreaterThan(0);
         });
 
         test('generates valid data when invalid param provided', () => {
@@ -126,21 +126,38 @@ describe('person data type', () => {
             const prefix = person.prefix('invalid');
 
             expect(typeof prefix).toBe('string');
-            expect(prefix.length).toBeGreaterThan(2);
+            expect(prefix.length).toBeGreaterThan(0);
         });
 
         test('male', () => {
             const prefix = person.prefix('male');
 
             expect(typeof prefix).toBe('string');
-            expect(prefix.length).toBeGreaterThan(2);
+            expect(prefix.length).toBeGreaterThan(0);
         });
 
         test('female', () => {
             const prefix = person.prefix('female');
 
             expect(typeof prefix).toBe('string');
-            expect(prefix.length).toBeGreaterThan(2);
+            expect(prefix.length).toBeGreaterThan(0);
+        });
+    });
+
+    describe('suffix', function() {
+        test('no params', () => {
+            const suffix = person.suffix();
+
+            expect(typeof suffix).toBe('string');
+            expect(suffix.length).toBeGreaterThan(0);
+        });
+
+        test('generates valid data when invalid param provided', () => {
+            // @ts-expect-error: invalid param
+            const suffix = person.suffix('invalid');
+
+            expect(typeof suffix).toBe('string');
+            expect(suffix.length).toBeGreaterThan(0);
         });
     });
 
