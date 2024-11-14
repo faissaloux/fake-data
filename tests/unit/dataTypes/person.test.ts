@@ -161,6 +161,23 @@ describe('person data type', () => {
         });
     });
 
+    describe('jobArea', function() {
+        test('no params', () => {
+            const jobArea = person.jobArea();
+
+            expect(typeof jobArea).toBe('string');
+            expect(jobArea.length).toBeGreaterThan(0);
+        });
+
+        test('generates valid data when invalid param provided', () => {
+            // @ts-expect-error: invalid param
+            const jobArea = person.jobArea('invalid');
+
+            expect(typeof jobArea).toBe('string');
+            expect(jobArea.length).toBeGreaterThan(0);
+        });
+    });
+
     describe('jobTitle', function() {
         test('no params', () => {
             const jobTitle = person.jobTitle();
