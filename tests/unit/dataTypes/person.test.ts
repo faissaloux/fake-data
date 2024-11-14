@@ -113,6 +113,37 @@ describe('person data type', () => {
         });
     });
 
+    describe('prefix', () => {
+        test('no params', () => {
+            const prefix = person.prefix();
+
+            expect(typeof prefix).toBe('string');
+            expect(prefix.length).toBeGreaterThan(2);
+        });
+
+        test('generates valid data when invalid param provided', () => {
+            // @ts-expect-error: invalid param
+            const prefix = person.prefix('invalid');
+
+            expect(typeof prefix).toBe('string');
+            expect(prefix.length).toBeGreaterThan(2);
+        });
+
+        test('male', () => {
+            const prefix = person.prefix('male');
+
+            expect(typeof prefix).toBe('string');
+            expect(prefix.length).toBeGreaterThan(2);
+        });
+
+        test('female', () => {
+            const prefix = person.prefix('female');
+
+            expect(typeof prefix).toBe('string');
+            expect(prefix.length).toBeGreaterThan(2);
+        });
+    });
+
     describe('jobTitle', function() {
         test('no params', () => {
             const jobTitle = person.jobTitle();

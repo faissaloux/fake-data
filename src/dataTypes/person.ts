@@ -17,6 +17,10 @@ class Person {
         return faker.person.sex();
     }
 
+    prefix(params?: 'male'|'female'): string {
+        return faker.person.prefix(params);
+    }
+
     jobTitle(): string {
         return faker.person.jobTitle();
     }
