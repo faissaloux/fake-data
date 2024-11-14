@@ -117,6 +117,7 @@ const popularTrips = useFakeData({
 | person.lastName       | string            | 'male'\|'female'      | 'male' or 'female'    |
 | person.prefix         | string            | 'male'\|'female'      | 'male' or 'female'    |
 | person.suffix         | string            | [No params]           | [No params]           |
+| person.jobArea        | string            | [No params]           | [No params]           |
 | person.jobTitle       | string            | [No params]           | [No params]           |
 | person.jobType        | string            | [No params]           | [No params]           |
 | person.sex            | string            | [No params]           | [No params]           |
