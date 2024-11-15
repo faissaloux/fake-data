@@ -120,6 +120,7 @@ const popularTrips = useFakeData({
 | person.jobArea        | string            | [No params]           | [No params]           |
 | person.jobTitle       | string            | [No params]           | [No params]           |
 | person.jobType        | string            | [No params]           | [No params]           |
+| person.jobDescriptor  | string            | [No params]           | [No params]           |
 | person.sex            | string            | [No params]           | [No params]           |
 | finance.amount        | string\|number    | object                | min?: number          |
 |                       |                   |                       | max?: number          |
