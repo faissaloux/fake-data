@@ -211,4 +211,21 @@ describe('person data type', () => {
             expect(jobType.length).toBeGreaterThan(2);
         });
     });
+
+    describe('jobDescriptor', function() {
+        test('no params', () => {
+            const jobDescriptor = person.jobDescriptor();
+
+            expect(typeof jobDescriptor).toBe('string');
+            expect(jobDescriptor.length).toBeGreaterThan(2);
+        });
+
+        test('generates valid data when invalid param provided', () => {
+            // @ts-expect-error: invalid param
+            const jobDescriptor = person.jobDescriptor('invalid');
+
+            expect(typeof jobDescriptor).toBe('string');
+            expect(jobDescriptor.length).toBeGreaterThan(2);
+        });
+    });
 });
