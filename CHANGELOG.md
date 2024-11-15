@@ -1,4 +1,15 @@
-## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.4.0...main)
+## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.5.0...main)
+
+## [v0.5.0](https://github.com/faissaloux/fake-data/compare/v0.4.0...v0.5.0) - 2024-11-15
+### Added
+- `person.jobArea` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/27
+- `person.jobDescriptor` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/26
+- `person.suffix` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/25
+- `person.prefix` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/24
+- `person.sex` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/23
+- `person.middleName` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/22
+- `person.jobType` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/21
+- `person.jobTitle` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/20
 
 ## [v0.4.0](https://github.com/faissaloux/fake-data/compare/v0.3.0...v0.4.0) - 2024-11-08
 ### Added
