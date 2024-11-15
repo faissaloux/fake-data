@@ -36,6 +36,10 @@ class Person {
     jobType(): string {
         return faker.person.jobType();
     }
+
+    jobDescriptor(): string {
+        return faker.person.jobDescriptor();
+    }
 }
 
 export default Person;
