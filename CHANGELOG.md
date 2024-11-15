@@ -2,7 +2,7 @@
 
 ## [v0.5.1](https://github.com/faissaloux/fake-data/compare/v0.5.0...v0.5.1) - 2024-11-15
 ### Fixed
-- Bump @eslint/plugin-kit from 0.2.1 to 0.2.3 by [@dependabot](https://github.com/apps/dependabot) in https://github.com/faissaloux/fake-data/pull/28
+- Bump @eslint/plugin-kit from 0.2.1 to 0.2.3 by [@dependabot](https://github.com/dependabot) in https://github.com/faissaloux/fake-data/pull/28
 
 ## [v0.5.0](https://github.com/faissaloux/fake-data/compare/v0.4.0...v0.5.0) - 2024-11-15
 ### Added
