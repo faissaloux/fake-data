@@ -25,6 +25,10 @@ class Person {
         return faker.person.suffix();
     }
 
+    jobArea(): string {
+        return faker.person.jobArea();
+    }
+
     jobTitle(): string {
         return faker.person.jobTitle();
     }
