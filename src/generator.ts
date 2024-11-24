@@ -1,6 +1,11 @@
+import Commerce from './dataTypes/commerce';
 import Finance from './dataTypes/finance';
+import Image from './dataTypes/image';
+import Internet from './dataTypes/internet';
 import Location from './dataTypes/location';
 import Person from './dataTypes/person';
+import Phone from './dataTypes/phone';
+import System from './dataTypes/system';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -11,6 +16,11 @@ class Generator {
         'person': Person,
         'location': Location,
         'finance': Finance,
+        'commerce': Commerce,
+        'image': Image,
+        'internet': Internet,
+        'phone': Phone,
+        'system': System,
     };
 
     constructor(private value: string) {
