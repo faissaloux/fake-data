@@ -135,3 +135,6 @@ const popularTrips = useFakeData({
 | system.semver         | string            | [No params]           | [No params]           |
 | phone.imei            | string            | [No params]           | [No params]           |
 | phone.number          | string            | [No params]           | [No params]           |
+| internet.email        | string            | object                | firstName?: string    |
+|                       |                   |                       | lastName?: string     |
+|                       |                   |                       | provider?: string     |
