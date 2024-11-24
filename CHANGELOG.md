@@ -1,4 +1,7 @@
-## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.5.1...main)
+## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.6.0...main)
+
+## [v0.6.0](https://github.com/faissaloux/fake-data/compare/v0.5.1...v0.6.0) - 2024-11-25
+- `internet.email` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/29
 
 ## [v0.5.1](https://github.com/faissaloux/fake-data/compare/v0.5.0...v0.5.1) - 2024-11-15
 ### Fixed
