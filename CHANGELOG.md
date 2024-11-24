@@ -1,6 +1,11 @@
-## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.6.0...main)
+## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.6.1...main)
+
+## [v0.6.1](https://github.com/faissaloux/fake-data/compare/v0.6.0...v0.6.1) - 2024-11-25
+### Fixed
+- Fix: Datatypes not recognized by the Generator by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/30
 
 ## [v0.6.0](https://github.com/faissaloux/fake-data/compare/v0.5.1...v0.6.0) - 2024-11-25
+### Added
 - `internet.email` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/29
 
 ## [v0.5.1](https://github.com/faissaloux/fake-data/compare/v0.5.0...v0.5.1) - 2024-11-15
