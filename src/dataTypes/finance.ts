@@ -10,6 +10,10 @@ interface amountParams {
 
 class Finance {
     amount(params: amountParams = {}): string|number {
+        if (params === null) {
+            params = {};
+        }
+
         if (params['asNumber'] && ! params['symbol']) {
             delete params['asNumber'];
 

@@ -8,6 +8,10 @@ interface emailParams {
 
 class Internet {
     email(params: emailParams = {}): string {
+        if (params === null) {
+            params = {};
+        }
+
         return faker.internet.email(params);
     }
 }

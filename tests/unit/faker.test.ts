@@ -1,6 +1,28 @@
 import { useFakeData } from '../../src';
 
 describe('faker', () => {
+    test('all dataTypes Supported', () => {
+        const data = useFakeData({
+            commerce: 'commerce.product',
+            finance: 'finance.amount',
+            image: 'image.avatar',
+            internet: 'internet.email',
+            location: 'location.city',
+            person: 'person.firstName',
+            phone: 'phone.number',
+            system: 'system.semver',
+        });
+
+        expect(data[0]['commerce']).not.toEqual('commerce.product');
+        expect(data[0]['finance']).not.toEqual('finance.amount');
+        expect(data[0]['image']).not.toEqual('image.avatar');
+        expect(data[0]['internet']).not.toEqual('internet.email');
+        expect(data[0]['location']).not.toEqual('location.city');
+        expect(data[0]['person']).not.toEqual('person.firstName');
+        expect(data[0]['phone']).not.toEqual('phone.number');
+        expect(data[0]['system']).not.toEqual('system.semver');
+    });
+
     test('generate one by default', () => {
         const data = useFakeData({
             departure: 'location.city',
