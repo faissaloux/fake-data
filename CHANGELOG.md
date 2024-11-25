@@ -1,4 +1,8 @@
-## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.6.1...main)
+## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.6.2...main)
+
+## [v0.6.2](https://github.com/faissaloux/fake-data/compare/v0.6.1...v0.6.2) - 2024-11-25
+### Fixed
+- Fix null params by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/31
 
 ## [v0.6.1](https://github.com/faissaloux/fake-data/compare/v0.6.0...v0.6.1) - 2024-11-25
 ### Fixed
