@@ -30,13 +30,11 @@ const popularTrips = useFakeData({
 ```js
 // popularTrips
 
-[
-    {
-        driver: "Krystal",
-        from: "New York",
-        to: "Connport"
-    }
-]
+{
+    driver: "Krystal",
+    from: "New York",
+    to: "Connport"
+}
 ```
 
 You can even specify how much data you want, by passing the count as the 2nd argument.
@@ -57,18 +55,18 @@ const popularTrips = useFakeData({
 
 [
     {
+        from: "Archibaldburgh",
+        to: "Port Dashawnport",
         driver: {
             first_name: "Walker",
-        },
-        from: "Archibaldburgh",
-        to: "Port Dashawnport"
+        }
     },
     {
+        from: "Port Charlotte",
+        to: "West Myles",
         driver: {
             first_name: "Mercedes",
-        },
-        from: "Port Charlotte",
-        to: "West Myles"
+        }
     }
 ]
 ```
@@ -95,16 +93,14 @@ const popularTrips = useFakeData({
 ```js
 // popularTrips
 
-[
-    {
-        driver: {
-            first_name: "Michael",
-            price: 66.51
-        },
-        from: "Helmerbury",
-        to: "New Minniestead"
+{
+    from: "Helmerbury",
+    to: "New Minniestead",
+    driver: {
+        first_name: "Michael",
+        price: 66.51
     }
-]
+}
 ```
 
 ## Supported data
