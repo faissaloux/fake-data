@@ -1,4 +1,11 @@
-## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.6.2...main)
+## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.7.0...main)
+
+## [v0.7.0](https://github.com/faissaloux/fake-data/compare/v0.6.2...v0.7.0) - 2024-11-30
+### Added
+- return one single object when one record demanded by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/32
+
+### Documentation
+- correct documentation for single object by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/33
 
 ## [v0.6.2](https://github.com/faissaloux/fake-data/compare/v0.6.1...v0.6.2) - 2024-11-25
 ### Fixed
