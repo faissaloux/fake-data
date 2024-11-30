@@ -42,6 +42,7 @@ describe('faker', () => {
             last_name: 'person.lastName',
         }, 4) as unifiedObject[];
 
+        expect(Array.isArray(data)).toBeTruthy();
         expect(data).toHaveLength(4);
         expect(data[0]).toHaveProperty('first_name');
         expect(data[0]).toHaveProperty('last_name');
@@ -55,6 +56,7 @@ describe('faker', () => {
             last_name: 'person.lastName',
         }, 2) as unifiedObject[];
 
+        expect(Array.isArray(data)).toBeTruthy();
         expect(data).toHaveLength(2);
         expect(data[0]['first_name']).not.toEqual(data[1]['first_name']);
         expect(data[0]['last_name']).not.toEqual(data[1]['last_name']);
@@ -100,6 +102,7 @@ describe('faker', () => {
             }
         }, 2) as any;   // eslint-disable-line @typescript-eslint/no-explicit-any
 
+        expect(Array.isArray(data)).toBeTruthy();
         expect(data).toHaveLength(2);
         expect(data[0]).toHaveProperty('departure');
         expect(data[0]).toHaveProperty('destination');
