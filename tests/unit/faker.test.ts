@@ -98,7 +98,7 @@ describe('faker', () => {
                     currency: 'MAD',
                 }
             }
-        }, 2) as any;
+        }, 2) as any;   // eslint-disable-line @typescript-eslint/no-explicit-any
 
         expect(data).toHaveLength(2);
         expect(data[0]).toHaveProperty('departure');
@@ -127,7 +127,7 @@ describe('faker', () => {
                     currency: 'finance.currencyCode',
                 }
             }
-        }, 2) as any;
+        }, 2) as any;   // eslint-disable-line @typescript-eslint/no-explicit-any
 
         expect(data[0]['driver']['price']['amount']).toBeLessThanOrEqual(100);
         expect(data[0]['driver']['price']['amount']).toBeGreaterThanOrEqual(0);
