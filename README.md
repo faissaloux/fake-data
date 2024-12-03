@@ -134,3 +134,4 @@ const popularTrips = useFakeData({
 | internet.email        | string            | object                | firstName?: string    |
 |                       |                   |                       | lastName?: string     |
 |                       |                   |                       | provider?: string     |
+| lorem.text            | string            | [No params]           | [No params]           |
