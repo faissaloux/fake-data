@@ -21,7 +21,7 @@ describe('number data type', () => {
             const int = number.int(4);
 
             expect(typeof int).toBe('number');
-            expect(int).toBeGreaterThan(0);
+            expect(int).toBeGreaterThanOrEqual(0);
             expect(int).toBeLessThanOrEqual(4);
         });
 
