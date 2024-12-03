@@ -37,7 +37,7 @@ describe('number data type', () => {
             const int = number.int({min: 10, max: 20, multipleOf: 5});
 
             expect(typeof int).toBe('number');
-            expect(int).toBeGreaterThan(10);
+            expect(int).toBeGreaterThanOrEqual(10);
             expect(int).toBeLessThanOrEqual(20);
             expect(int % 5).toEqual(0);
         });
