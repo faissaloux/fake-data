@@ -139,3 +139,8 @@ const popularTrips = useFakeData({
 |                       |                   |                       | min: number           |
 |                       |                   |                       | max: number           |
 |                       |                   |                       | }                     |
+| number.int            | number            | number\|object        | number\|{             |
+|                       |                   |                       | min?: number          |
+|                       |                   |                       | max?: number          |
+|                       |                   |                       | multipleOf: number    |
+|                       |                   |                       | }                     |
