@@ -3,6 +3,7 @@ import Finance from './dataTypes/finance';
 import Image from './dataTypes/image';
 import Internet from './dataTypes/internet';
 import Location from './dataTypes/location';
+import Lorem from './dataTypes/lorem';
 import Person from './dataTypes/person';
 import Phone from './dataTypes/phone';
 import System from './dataTypes/system';
@@ -21,6 +22,7 @@ class Generator {
         'internet': Internet,
         'phone': Phone,
         'system': System,
+        'lorem': Lorem,
     };
 
     constructor(private value: string) {
