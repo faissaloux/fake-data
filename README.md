@@ -135,3 +135,7 @@ const popularTrips = useFakeData({
 |                       |                   |                       | lastName?: string     |
 |                       |                   |                       | provider?: string     |
 | lorem.text            | string            | [No params]           | [No params]           |
+| lorem.paragraph       | string            | number\|object        | number\|{             |
+|                       |                   |                       | min: number           |
+|                       |                   |                       | max: number           |
+|                       |                   |                       | }                     |
