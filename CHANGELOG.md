@@ -1,4 +1,10 @@
-## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.7.0...main)
+## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.8.0...main)
+
+## [v0.8.0](https://github.com/faissaloux/fake-data/compare/v0.7.0...v0.8.0) - 2024-12-03
+### Added
+- `lorem.text` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/34
+- `lorem.paragraph` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/35
+- `number.int` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/36
 
 ## [v0.7.0](https://github.com/faissaloux/fake-data/compare/v0.6.2...v0.7.0) - 2024-11-30
 ### Added
