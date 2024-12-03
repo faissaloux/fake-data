@@ -4,6 +4,7 @@ import Image from './dataTypes/image';
 import Internet from './dataTypes/internet';
 import Location from './dataTypes/location';
 import Lorem from './dataTypes/lorem';
+import Number from './dataTypes/number';
 import Person from './dataTypes/person';
 import Phone from './dataTypes/phone';
 import System from './dataTypes/system';
@@ -23,6 +24,7 @@ class Generator {
         'phone': Phone,
         'system': System,
         'lorem': Lorem,
+        'number': Number,
     };
 
     constructor(private value: string) {
