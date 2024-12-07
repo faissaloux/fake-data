@@ -1,5 +1,6 @@
 import Array from './dataTypes/array';
 import Commerce from './dataTypes/commerce';
+import Date from './dataTypes/date';
 import Finance from './dataTypes/finance';
 import Image from './dataTypes/image';
 import Internet from './dataTypes/internet';
@@ -27,6 +28,7 @@ class Generator {
         'lorem': Lorem,
         'number': Number,
         'array': Array,
+        'date': Date,
     };
 
     constructor(private value: string) {
