@@ -144,3 +144,4 @@ const popularTrips = useFakeData({
 |                       |                   |                       | max?: number          |
 |                       |                   |                       | multipleOf: number    |
 |                       |                   |                       | }                     |
+| array.element         | T                 | array<T>              | array<T>              |
