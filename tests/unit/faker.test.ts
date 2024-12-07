@@ -1,5 +1,4 @@
 import { useFakeData } from '../../src';
-import { unifiedObject } from '../../src/dataUnifier';
 
 describe('faker', () => {
     test('all dataTypes Supported', () => {
@@ -12,7 +11,7 @@ describe('faker', () => {
             person: 'person.firstName',
             phone: 'phone.number',
             system: 'system.semver',
-        }) as unifiedObject;
+        });
 
         expect(typeof data).not.toBe('array');
         expect(data['commerce']).not.toEqual('commerce.product');
@@ -29,7 +28,7 @@ describe('faker', () => {
         const data = useFakeData({
             departure: 'location.city',
             destination: 'location.city',
-        }) as unifiedObject;
+        });
 
         expect(typeof data).not.toBe('array');
         expect(data).toHaveProperty('departure');
@@ -40,7 +39,7 @@ describe('faker', () => {
         const data = useFakeData({
             first_name: 'person.firstName',
             last_name: 'person.lastName',
-        }, 4) as unifiedObject[];
+        }, 4);
 
         expect(Array.isArray(data)).toBeTruthy();
         expect(data).toHaveLength(4);
@@ -54,7 +53,7 @@ describe('faker', () => {
         const data = useFakeData({
             first_name: 'person.firstName',
             last_name: 'person.lastName',
-        }, 2) as unifiedObject[];
+        }, 2);
 
         expect(Array.isArray(data)).toBeTruthy();
         expect(data).toHaveLength(2);
@@ -66,7 +65,7 @@ describe('faker', () => {
         const data = useFakeData({
             departure: 'notsupported',
             destination: 'notsupported'
-        }) as unifiedObject;
+        });
 
         expect(typeof data).not.toBe('array');
         expect(data).toHaveProperty('departure');
@@ -79,7 +78,7 @@ describe('faker', () => {
         const data = useFakeData({
             departure: 'internet.notsupported',
             destination: 'internet.notsupported',
-        }) as unifiedObject;
+        });
 
         expect(typeof data).not.toBe('array');
         expect(data).toHaveProperty('departure');
@@ -100,7 +99,7 @@ describe('faker', () => {
                     currency: 'MAD',
                 }
             }
-        }, 2) as any;   // eslint-disable-line @typescript-eslint/no-explicit-any
+        }, 2);
 
         expect(Array.isArray(data)).toBeTruthy();
         expect(data).toHaveLength(2);
