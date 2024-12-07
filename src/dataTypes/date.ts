@@ -7,7 +7,7 @@ interface pastParams {
 }
 
 class Date {
-    past(params: pastParams = {separator:'/'}): string {
+    past(params: pastParams = {separator: '/'}): string {
         return faker.date.past(params).toLocaleDateString('en-UK').replaceAll('/', params['separator'] ?? '/');
     }
 }
