@@ -1,6 +1,7 @@
 import Array from '../../../src/dataTypes/array';
 
 describe('array data type', () => {
+    // eslint-disable-next-line @typescript-eslint/no-array-constructor
     const array = new Array();
 
     describe('element', () => {
