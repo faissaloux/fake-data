@@ -33,12 +33,12 @@ describe('date data type', () => {
         });
 
         test('generates valid data with customized separator', () => {
-            const past = date.past({years: 3}, '-');
+            const past = date.past({years: 3, separator: '-'});
             const dateFormat = /^(\d{1,2})-(\d{1,2})-(\d{4})$/g;
 
             expect(dateFormat.test(past)).toBeTruthy();
             expect(typeof past).toBe('string');
-            expect(inPast(past)).toBeTruthy();
+            expect(inPast(past, '-')).toBeTruthy();
             expect(past.match(/\//g) || []).toHaveLength(0);
             expect(past.match(/-/g) || []).toHaveLength(2);
         });
