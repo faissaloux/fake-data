@@ -1,3 +1,4 @@
+import Array from './dataTypes/array';
 import Commerce from './dataTypes/commerce';
 import Finance from './dataTypes/finance';
 import Image from './dataTypes/image';
@@ -25,6 +26,7 @@ class Generator {
         'system': System,
         'lorem': Lorem,
         'number': Number,
+        'array': Array,
     };
 
     constructor(private value: string) {
