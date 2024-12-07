@@ -1,4 +1,12 @@
-## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.8.0...main)
+## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.9.0...main)
+
+## [v0.9.0](https://github.com/faissaloux/fake-data/compare/v0.8.0...v0.9.0) - 2024-12-07
+### Added
+- `date.past` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/39
+- `array.element` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/38
+### Fixed
+- Update `date.past` params format by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/40
+- Fix useFakeData() return type by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/37
 
 ## [v0.8.0](https://github.com/faissaloux/fake-data/compare/v0.7.0...v0.8.0) - 2024-12-03
 ### Added
