@@ -145,7 +145,8 @@ const popularTrips = useFakeData({
 |                       |                   |                       | multipleOf: number        |
 |                       |                   |                       | }                         |
 | array.element         | T                 | array<T>              | array<T>                  |
-| date.past             | string            | object&string         | {                         |
+| date.past             | string            | object                | {                         |
 |                       |                   |                       | years?: number            |
 |                       |                   |                       | refDate?: string | number |
-|                       |                   |                       | } & separator:string      |
+|                       |                   |                       | separator: string         |
+|                       |                   |                       | }                         |
