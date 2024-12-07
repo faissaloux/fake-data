@@ -3,7 +3,7 @@ import Generator from './generator';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-function useFakeData(data: {[key: string]: any}, count = 1): unifiedObject|unifiedObject[] {
+function useFakeData(data: {[key: string]: any}, count = 1): {[key: string]: any} {
     const generated: unifiedObject[] = [];
 
     const unifiedData: unifiedObject = new DataUnifier(data).unify();
