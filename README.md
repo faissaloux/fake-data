@@ -104,44 +104,48 @@ const popularTrips = useFakeData({
 ```
 
 ## Supported data
-| Identifier            | Return type       | Args type             | Options               |
-| --------------------- | ----------------- | --------------------- | --------------------- |
-| location.city         | string            | [No params]           | [No params]           |
-| location.country      | string            | [No params]           | [No params]           |
-| person.firstName      | string            | 'male'\|'female'      | 'male' or 'female'    |
-| person.middleName     | string            | 'male'\|'female'      | 'male' or 'female'    |
-| person.lastName       | string            | 'male'\|'female'      | 'male' or 'female'    |
-| person.prefix         | string            | 'male'\|'female'      | 'male' or 'female'    |
-| person.suffix         | string            | [No params]           | [No params]           |
-| person.jobArea        | string            | [No params]           | [No params]           |
-| person.jobTitle       | string            | [No params]           | [No params]           |
-| person.jobType        | string            | [No params]           | [No params]           |
-| person.jobDescriptor  | string            | [No params]           | [No params]           |
-| person.sex            | string            | [No params]           | [No params]           |
-| finance.amount        | string\|number    | object                | min?: number          |
-|                       |                   |                       | max?: number          |
-|                       |                   |                       | dec?: number          |
-|                       |                   |                       | symbol: string        |
-|                       |                   |                       | asNumber?: boolean    |
-| finance.currencyCode  | string            | [No params]           | [No params]           |
-| finance.currencySymbol| string            | [No params]           | [No params]           |
-| commerce.product      | string            | [No params]           | [No params]           |
-| image.avatar          | string            | [No params]           | [No params]           |
-| system.mimeType       | string            | [No params]           | [No params]           |
-| system.semver         | string            | [No params]           | [No params]           |
-| phone.imei            | string            | [No params]           | [No params]           |
-| phone.number          | string            | [No params]           | [No params]           |
-| internet.email        | string            | object                | firstName?: string    |
-|                       |                   |                       | lastName?: string     |
-|                       |                   |                       | provider?: string     |
-| lorem.text            | string            | [No params]           | [No params]           |
-| lorem.paragraph       | string            | number\|object        | number\|{             |
-|                       |                   |                       | min: number           |
-|                       |                   |                       | max: number           |
-|                       |                   |                       | }                     |
-| number.int            | number            | number\|object        | number\|{             |
-|                       |                   |                       | min?: number          |
-|                       |                   |                       | max?: number          |
-|                       |                   |                       | multipleOf: number    |
-|                       |                   |                       | }                     |
-| array.element         | T                 | array<T>              | array<T>              |
+| Identifier            | Return type       | Args type             | Options                   |
+| --------------------- | ----------------- | --------------------- | --------------------------|
+| location.city         | string            | [No params]           | [No params]               |
+| location.country      | string            | [No params]           | [No params]               |
+| person.firstName      | string            | 'male'\|'female'      | 'male' or 'female'        |
+| person.middleName     | string            | 'male'\|'female'      | 'male' or 'female'        |
+| person.lastName       | string            | 'male'\|'female'      | 'male' or 'female'        |
+| person.prefix         | string            | 'male'\|'female'      | 'male' or 'female'        |
+| person.suffix         | string            | [No params]           | [No params]               |
+| person.jobArea        | string            | [No params]           | [No params]               |
+| person.jobTitle       | string            | [No params]           | [No params]               |
+| person.jobType        | string            | [No params]           | [No params]               |
+| person.jobDescriptor  | string            | [No params]           | [No params]               |
+| person.sex            | string            | [No params]           | [No params]               |
+| finance.amount        | string\|number    | object                | min?: number              |
+|                       |                   |                       | max?: number              |
+|                       |                   |                       | dec?: number              |
+|                       |                   |                       | symbol: string            |
+|                       |                   |                       | asNumber?: boolean        |
+| finance.currencyCode  | string            | [No params]           | [No params]               |
+| finance.currencySymbol| string            | [No params]           | [No params]               |
+| commerce.product      | string            | [No params]           | [No params]               |
+| image.avatar          | string            | [No params]           | [No params]               |
+| system.mimeType       | string            | [No params]           | [No params]               |
+| system.semver         | string            | [No params]           | [No params]               |
+| phone.imei            | string            | [No params]           | [No params]               |
+| phone.number          | string            | [No params]           | [No params]               |
+| internet.email        | string            | object                | firstName?: string        |
+|                       |                   |                       | lastName?: string         |
+|                       |                   |                       | provider?: string         |
+| lorem.text            | string            | [No params]           | [No params]               |
+| lorem.paragraph       | string            | number\|object        | number\|{                 |
+|                       |                   |                       | min: number               |
+|                       |                   |                       | max: number               |
+|                       |                   |                       | }                         |
+| number.int            | number            | number\|object        | number\|{                 |
+|                       |                   |                       | min?: number              |
+|                       |                   |                       | max?: number              |
+|                       |                   |                       | multipleOf: number        |
+|                       |                   |                       | }                         |
+| array.element         | T                 | array<T>              | array<T>                  |
+| date.past             | string            | object&string         | {                         |
+|                       |                   |                       | years?: number            |
+|                       |                   |                       | refDate?: string | number |
+|                       |                   |                       | } & separator:string      |
