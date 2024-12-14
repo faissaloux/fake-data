@@ -16,7 +16,7 @@ type WordOptions =
             min: number;
             max: number;
         };
-    }
+    };
 
 class Lorem {
     text(): string {
