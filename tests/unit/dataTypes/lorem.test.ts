@@ -55,4 +55,43 @@ describe('lorem data type', () => {
             expect(paragraph.split('.').length - 1).toBeLessThanOrEqual(10);
         });
     });
+
+    describe('word', () => {
+        test('no params', () => {
+            const word = lorem.word();
+
+            expect(typeof word).toBe('string');
+            expect(word.length).toBeGreaterThanOrEqual(1);
+        });
+
+        test('generates valid data when invalid param provided', () => {
+            // @ts-expect-error: invalid param
+            const word = lorem.word(null);
+
+            expect(typeof word).toBe('string');
+            expect(word.length).toBeGreaterThanOrEqual(1);
+        });
+
+        test('number parameter', () => {
+            const word = lorem.word(6);
+
+            expect(typeof word).toBe('string');
+            expect(word.length).toEqual(6);
+        });
+
+        test('length number', () => {
+            const word = lorem.word({length: 8});
+
+            expect(typeof word).toBe('string');
+            expect(word.length).toEqual(8);
+        });
+
+        test('length range', () => {
+            const word = lorem.word({length: {min: 4, max: 12}});
+
+            expect(typeof word).toBe('string');
+            expect(word.length).toBeGreaterThanOrEqual(4);
+            expect(word.length).toBeLessThanOrEqual(12);
+        });
+    });
 });

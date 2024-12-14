@@ -7,6 +7,17 @@ type ParagraphParams =
         max: number;
     };
 
+type WordOptions =
+    | number
+    | {
+        length?:
+        | number
+        | {
+            min: number;
+            max: number;
+        };
+    };
+
 class Lorem {
     text(): string {
         return faker.lorem.text();
@@ -18,6 +29,10 @@ class Lorem {
         }
 
         return faker.lorem.paragraph(sentenceCount);
+    }
+
+    word(options: WordOptions = {}): string {
+        return faker.lorem.word(options);
     }
 }
 
