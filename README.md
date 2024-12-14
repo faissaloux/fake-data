@@ -104,55 +104,224 @@ const popularTrips = useFakeData({
 ```
 
 ## Supported data
-| Identifier            | Return type       | Args type             | Options                   |
-| --------------------- | ----------------- | --------------------- | --------------------------|
-| location.city         | string            | [No params]           | [No params]               |
-| location.country      | string            | [No params]           | [No params]               |
-| person.firstName      | string            | 'male'\|'female'      | 'male' or 'female'        |
-| person.middleName     | string            | 'male'\|'female'      | 'male' or 'female'        |
-| person.lastName       | string            | 'male'\|'female'      | 'male' or 'female'        |
-| person.prefix         | string            | 'male'\|'female'      | 'male' or 'female'        |
-| person.suffix         | string            | [No params]           | [No params]               |
-| person.jobArea        | string            | [No params]           | [No params]               |
-| person.jobTitle       | string            | [No params]           | [No params]               |
-| person.jobType        | string            | [No params]           | [No params]               |
-| person.jobDescriptor  | string            | [No params]           | [No params]               |
-| person.sex            | string            | [No params]           | [No params]               |
-| finance.amount        | string\|number    | object                | min?: number              |
-|                       |                   |                       | max?: number              |
-|                       |                   |                       | dec?: number              |
-|                       |                   |                       | symbol: string            |
-|                       |                   |                       | asNumber?: boolean        |
-| finance.currencyCode  | string            | [No params]           | [No params]               |
-| finance.currencySymbol| string            | [No params]           | [No params]               |
-| commerce.product      | string            | [No params]           | [No params]               |
-| image.avatar          | string            | [No params]           | [No params]               |
-| system.mimeType       | string            | [No params]           | [No params]               |
-| system.semver         | string            | [No params]           | [No params]               |
-| phone.imei            | string            | [No params]           | [No params]               |
-| phone.number          | string            | [No params]           | [No params]               |
-| internet.email        | string            | object                | firstName?: string        |
-|                       |                   |                       | lastName?: string         |
-|                       |                   |                       | provider?: string         |
-| lorem.text            | string            | [No params]           | [No params]               |
-| lorem.word            | string            | number\|object        | number\|{                 |
-|                       |                   |                       | length?: number\|{        |
-|                       |                   |                       | min: number               |
-|                       |                   |                       | max: number               |
-|                       |                   |                       | }                         |
-|                       |                   |                       | }                         |
-| lorem.paragraph       | string            | number\|object        | number\|{                 |
-|                       |                   |                       | min: number               |
-|                       |                   |                       | max: number               |
-|                       |                   |                       | }                         |
-| number.int            | number            | number\|object        | number\|{                 |
-|                       |                   |                       | min?: number              |
-|                       |                   |                       | max?: number              |
-|                       |                   |                       | multipleOf: number        |
-|                       |                   |                       | }                         |
-| array.element         | T                 | array<T>              | array<T>                  |
-| date.past             | string            | object                | {                         |
-|                       |                   |                       | years?: number            |
-|                       |                   |                       | refDate?: string | number |
-|                       |                   |                       | separator: string         |
-|                       |                   |                       | }                         |
+<table>
+<tr>
+    <th>Data type</th>
+    <th>Identifier</th>
+    <th>Return type</th>
+    <th>Args type</th>
+    <th>Options</th>
+</tr>
+<tr>
+    <td rowspan='2'>location</td>
+    <td>location.city</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td>location.country</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td rowspan='10'>person</td>
+    <td>person.firstName</td>
+    <td>string</td>
+    <td>'male'\|'female'</td>
+    <td>'male' or 'female'</td>
+</tr>
+<tr>
+    <td>person.middleName</td>
+    <td>string</td>
+    <td>'male'\|'female'</td>
+    <td>'male' or 'female'</td>
+</tr>
+<tr>
+    <td>person.lastName</td>
+    <td>string</td>
+    <td>'male'\|'female'</td>
+    <td>'male' or 'female'</td>
+</tr>
+<tr>
+    <td>person.prefix</td>
+    <td>string</td>
+    <td>'male'\|'female'</td>
+    <td>'male' or 'female'</td>
+</tr>
+<tr>
+    <td>person.suffix</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td>person.jobArea</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td>person.jobTitle</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td>person.jobType</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td>person.jobDescriptor</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td>person.sex</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td rowspan='3'>finance</td>
+    <td>finance.amount</td>
+    <td>string\|number</td>
+    <td>object</td>
+    <td>{<br>
+        min?: number,<br>
+        max?: number,<br>
+        dec?: number,<br>
+        symbol: string,<br>
+        asNumber?: boolean<br>
+        }
+    </td>
+</tr>
+<tr>
+    <td>finance.currencyCode</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td>finance.currencySymbol</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td rowspan='1'>commerce</td>
+    <td>commerce.product</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td rowspan='1'>image</td>
+    <td>image.avatar</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td rowspan='2'>system</td>
+    <td>system.mimeType</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td>system.semver</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td rowspan='2'>phone</td>
+    <td>phone.imei</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td>phone.number</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td rowspan='1'>internet</td>
+    <td>internet.email</td>
+    <td>string</td>
+    <td>object</td>
+    <td>{<br>
+        firstName?: string,<br>
+        lastName?: string,<br>
+        provider?: string<br>
+        }
+    </td>
+</tr>
+<tr>
+    <td rowspan='3'>lorem</td>
+    <td>lorem.text</td>
+    <td>string</td>
+    <td>[No params]</td>
+    <td>[No params]</td>
+</tr>
+<tr>
+    <td>lorem.word</td>
+    <td>string</td>
+    <td>number\|object</td>
+    <td>number or {<br>
+        length?: number or {<br>
+        min: number,<br>
+        max: number<br>
+        }<br>
+        }
+    </td>
+</tr>
+<tr>
+    <td>lorem.paragraph</td>
+    <td>string</td>
+    <td>number\|object</td>
+    <td>number or {<br>
+        min: number,<br>
+        max: number<br>
+        }
+    </td>
+</tr>
+<tr>
+    <td rowspan='1'>number</td>
+    <td>number.int</td>
+    <td>number</td>
+    <td>number\|object</td>
+    <td>number or {<br>
+        min?: number,<br>
+        max?: number,<br>
+        multipleOf?: number<br>
+        }
+    </td>
+</tr>
+<tr>
+    <td rowspan='1'>array</td>
+    <td>array.element</td>
+    <td>T</td>
+    <td>array<T></td>
+    <td>array<T></td>
+</tr>
+<tr>
+    <td rowspan='1'>date</td>
+    <td>date.past</td>
+    <td>string</td>
+    <td>object</td>
+    <td>{<br>
+        years?: number,<br>
+        refDate?: string | number,<br>
+        separator: string<br>
+        }
+    </td>
+</tr>
+</table>
