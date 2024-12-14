@@ -27,5 +27,5 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Lint
-        run: yarn lint
+      - name: Check lint
+        run: yarn lint:check
