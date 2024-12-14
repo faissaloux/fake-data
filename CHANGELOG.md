@@ -1,4 +1,14 @@
-## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.9.0...main)
+## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.10.0...main)
+
+## [v0.10.0](https://github.com/faissaloux/fake-data/compare/v0.9.0...v0.10.0) - 2024-12-14
+### Added
+- `lorem.word` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/41
+
+### CI/CD
+- setup `lint-staged` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/43
+
+### Documentation
+- Enhance supported data documentation table by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/42
 
 ## [v0.9.0](https://github.com/faissaloux/fake-data/compare/v0.8.0...v0.9.0) - 2024-12-07
 ### Added
