@@ -96,6 +96,61 @@ describe('person data type', () => {
         });
     });
 
+    describe('fullName', () => {
+        test('no params', () => {
+            const fullName = person.fullName();
+
+            expect(typeof fullName).toBe('string');
+            expect(fullName.length).toBeGreaterThan(2);
+            expect(fullName.includes(' ')).toBeTruthy();
+        });
+
+        test('generates valid data when invalid param provided', () => {
+            // @ts-expect-error: invalid param
+            const fullName = person.fullName('invalid');
+
+            expect(typeof fullName).toBe('string');
+            expect(fullName.length).toBeGreaterThan(2);
+            expect(fullName.includes(' ')).toBeTruthy();
+        });
+
+        test('firstName', () => {
+            const fullName = person.fullName({firstName: 'Faissal'});
+
+            expect(typeof fullName).toBe('string');
+            expect(fullName.length).toBeGreaterThan(2);
+            expect(fullName.includes(' ')).toBeTruthy();
+            expect(fullName.includes('Faissal')).toBeTruthy();
+        });
+
+        test('lastName', () => {
+            const fullName = person.fullName({lastName: 'Wahabali'});
+
+            expect(typeof fullName).toBe('string');
+            expect(fullName.length).toBeGreaterThan(2);
+            expect(fullName.includes(' ')).toBeTruthy();
+            expect(fullName.includes('Wahabali')).toBeTruthy();
+        });
+
+        test('both firstName and lastName', () => {
+            const fullName = person.fullName({firstName: 'Faissal', lastName: 'Wahabali'});
+
+            expect(typeof fullName).toBe('string');
+            expect(fullName.length).toBeGreaterThan(2);
+            expect(fullName.includes(' ')).toBeTruthy();
+            expect(fullName.includes('Faissal')).toBeTruthy();
+            expect(fullName.includes('Wahabali')).toBeTruthy();
+        });
+
+        test('sex', () => {
+            const fullName = person.fullName({sex: 'male'});
+
+            expect(typeof fullName).toBe('string');
+            expect(fullName.length).toBeGreaterThan(2);
+            expect(fullName.includes(' ')).toBeTruthy();
+        });
+    });
+
     describe('sex', function() {
         test('no params', () => {
             const sex = person.sex();
