@@ -126,7 +126,7 @@ const popularTrips = useFakeData({
     <td>[No params]</td>
 </tr>
 <tr>
-    <td rowspan='10'>person</td>
+    <td rowspan='11'>person</td>
     <td>person.firstName</td>
     <td>string</td>
     <td>'male'\|'female'</td>
@@ -143,6 +143,17 @@ const popularTrips = useFakeData({
     <td>string</td>
     <td>'male'\|'female'</td>
     <td>'male' or 'female'</td>
+</tr>
+<tr>
+    <td>person.fullName</td>
+    <td>string</td>
+    <td>object</td>
+    <td>{<br>
+        firstName?: string,<br>
+        lastName?: string,<br>
+        sex?: 'male' | 'female'<br>
+        }
+    </td>
 </tr>
 <tr>
     <td>person.prefix</td>

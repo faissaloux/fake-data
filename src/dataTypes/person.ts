@@ -1,23 +1,35 @@
 import { faker } from '@faker-js/faker';
 
+type SexType = 'male'|'female';
+
+type FullNameParams = {
+    firstName?: string;
+    lastName?: string;
+    sex?: SexType;
+};
+
 class Person {
-    firstName(params?: 'male'|'female'): string {
+    firstName(params?: SexType): string {
         return faker.person.firstName(params);
     }
 
-    middleName(params?: 'male'|'female'): string {
+    middleName(params?: SexType): string {
         return faker.person.middleName(params);
     }
 
-    lastName(params?: 'male'|'female'): string {
+    lastName(params?: SexType): string {
         return faker.person.lastName(params);
+    }
+
+    fullName(params: FullNameParams = {}): string {
+        return faker.person.fullName(params);
     }
 
     sex(): string {
         return faker.person.sex();
     }
 
-    prefix(params?: 'male'|'female'): string {
+    prefix(params?: SexType): string {
         return faker.person.prefix(params);
     }
 
