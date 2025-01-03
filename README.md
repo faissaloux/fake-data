@@ -113,7 +113,7 @@ const popularTrips = useFakeData({
     <th>Options</th>
 </tr>
 <tr>
-    <td rowspan='2'>location</td>
+    <td rowspan='3'>location</td>
     <td>location.city</td>
     <td>string</td>
     <td>[No params]</td>
@@ -124,6 +124,16 @@ const popularTrips = useFakeData({
     <td>string</td>
     <td>[No params]</td>
     <td>[No params]</td>
+</tr>
+<tr>
+    <td>location.zipCode</td>
+    <td>string</td>
+    <td>string|object</td>
+    <td>string or <br>
+    {<br>
+        format?: string<br>
+    }
+    </td>
 </tr>
 <tr>
     <td rowspan='11'>person</td>
