@@ -20,7 +20,7 @@ describe('location data type', () => {
         });
     });
 
-    describe('zipCode', () => {
+    describe('country', () => {
         test('no params', () => {
             const country = location.country();
 
