@@ -1,4 +1,9 @@
-## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.10.0...main)
+## [Unreleased](https://github.com/faissaloux/fake-data/compare/v0.11.0...main)
+
+## [v0.11.0](https://github.com/faissaloux/fake-data/compare/v0.10.0...v0.11.0) - 2025-01-03
+### Added
+- `location.zipCode` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/45
+- `person.fullName` by [@faissaloux](https://github.com/faissaloux) in https://github.com/faissaloux/fake-data/pull/44
 
 ## [v0.10.0](https://github.com/faissaloux/fake-data/compare/v0.9.0...v0.10.0) - 2024-12-14
 ### Added
