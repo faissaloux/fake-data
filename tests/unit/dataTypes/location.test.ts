@@ -20,7 +20,7 @@ describe('location data type', () => {
         });
     });
 
-    describe('country', () => {
+    describe('zipCode', () => {
         test('no params', () => {
             const country = location.country();
 
@@ -34,6 +34,37 @@ describe('location data type', () => {
 
             expect(typeof country).toBe('string');
             expect(country.length).toBeGreaterThan(2);
+        });
+    });
+
+    describe('zipCode', () => {
+        test('no params', () => {
+            const zipCode = location.zipCode();
+
+            expect(typeof zipCode).toBe('string');
+            expect(zipCode.length).toBeGreaterThan(2);
+        });
+
+        test('generates valid data when invalid param provided', () => {
+            // @ts-expect-error: invalid param
+            const zipCode = location.zipCode(0);
+
+            expect(typeof zipCode).toBe('string');
+            expect(zipCode.length).toBeGreaterThan(2);
+        });
+
+        test('string', () => {
+            const zipCode = location.zipCode('81050');
+
+            expect(typeof zipCode).toBe('string');
+            expect(zipCode).toBe('81050');
+        });
+
+        test('format', () => {
+            const zipCode = location.zipCode({format: '####'});
+
+            expect(typeof zipCode).toBe('string');
+            expect(zipCode.length).toBe(4);
         });
     });
 });
