@@ -43,4 +43,45 @@ describe('date data type', () => {
             expect(past.match(/-/g) || []).toHaveLength(2);
         });
     });
+
+    describe('future', () => {
+        function inFuture(date: string, separator = '/'): boolean {
+            const futureSplitted = date.split(separator);
+            const futureFormatted = new Date(`${futureSplitted[2]}-${futureSplitted[1]}-${futureSplitted[0]}`);
+
+            return futureFormatted.getTime() > Date.now();
+        }
+
+        test('no params', () => {
+            const future = date.future();
+            const dateFormat = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/g;
+
+            expect(dateFormat.test(future)).toBeTruthy();
+            expect(typeof future).toBe('string');
+            expect(inFuture(future)).toBeTruthy();
+            expect(future.match(/\//g) || []).toHaveLength(2);
+        });
+
+        test('generates valid data when invalid param provided', () => {
+            // @ts-expect-error: invalid param
+            const future = date.future(3);
+            const dateFormat = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/g;
+
+            expect(dateFormat.test(future)).toBeTruthy();
+            expect(typeof future).toBe('string');
+            expect(inFuture(future)).toBeTruthy();
+            expect(future.match(/\//g) || []).toHaveLength(2);
+        });
+
+        test('generates valid data with customized separator', () => {
+            const future = date.future({years: 3, separator: '-'});
+            const dateFormat = /^(\d{1,2})-(\d{1,2})-(\d{4})$/g;
+
+            expect(dateFormat.test(future)).toBeTruthy();
+            expect(typeof future).toBe('string');
+            expect(inFuture(future, '-')).toBeTruthy();
+            expect(future.match(/\//g) || []).toHaveLength(0);
+            expect(future.match(/-/g) || []).toHaveLength(2);
+        });
+    });
 });
