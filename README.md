@@ -334,8 +334,19 @@ const popularTrips = useFakeData({
     <td>array<T></td>
 </tr>
 <tr>
-    <td rowspan='1'>date</td>
+    <td rowspan='2'>date</td>
     <td>date.past</td>
+    <td>string</td>
+    <td>object</td>
+    <td>{<br>
+        years?: number,<br>
+        refDate?: string | number,<br>
+        separator: string<br>
+        }
+    </td>
+</tr>
+<tr>
+    <td>date.future</td>
     <td>string</td>
     <td>object</td>
     <td>{<br>
